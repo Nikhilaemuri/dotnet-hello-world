@@ -21,7 +21,7 @@ jobs:
     - name: Set up .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '6.0.13'
+        dotnet-version: '7.0.x'
 
     - name: Build with dotnet
       run: dotnet build --configuration Release
@@ -34,6 +34,6 @@ jobs:
       with:
         app-name: shbfjr764
         slot-name: Production
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_64699E55A2DB433FA8ECDD6D8988D817 }}
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_25D29F1176694120B2164FC50CFE87D5 }}
         package: ${{env.DOTNET_ROOT}}/myapp
 
